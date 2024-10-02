@@ -6,9 +6,9 @@ const admin = require("firebase-admin");
 const pathToServiceAccount = path.resolve("./src/utilities/firebase.json");
 const serviceAccount = require(pathToServiceAccount);
 
-const firebaseApp = admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-});
+// const firebaseApp = admin.initializeApp({
+//   credential: admin.credential.cert(serviceAccount),
+// });
 
 export const sendFirebaseNotification = async (title, body, token) => {
   const message = {
