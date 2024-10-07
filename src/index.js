@@ -8,7 +8,6 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import { connectToSSHDatabase } from "./database/ssh-connection";
 import { connectToDatabase } from "./database/connection";
-import { runScheduledFetch } from "./api/handlers/tweets";
 
 let port = config.app["port"];
 let app = express();
@@ -43,10 +42,6 @@ app.use("/users", express.static("uploads/users"));
 (async () => {
   // await connectToSSHDatabase();
   await connectToDatabase();
-  runScheduledFetch().catch((err) => {
-    console.error("Error in scheduled fetch:", err);
-    process.exit(1);
-  });
 })();
 
 http
