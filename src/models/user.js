@@ -13,11 +13,10 @@ export const UserModel = mongoose.model(
   new Schema(
     {
       apple_id: String,
-      name: String,
       email: String,
       password: String,
+      phoneNumber: String,
       username: String,
-      location: String,
       token: String,
       firebaseToken: { type: String, default: null },
       role: {
