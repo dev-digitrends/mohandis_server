@@ -42,10 +42,6 @@ app.use("/users", express.static("uploads/users"));
 (async () => {
   // await connectToSSHDatabase();
   await connectToDatabase();
-  runScheduledFetch().catch((err) => {
-    console.error("Error in scheduled fetch:", err);
-    process.exit(1);
-  });
 })();
 
 http
