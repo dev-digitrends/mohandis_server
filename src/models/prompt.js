@@ -29,6 +29,6 @@ export async function getAllPrompt(query) {
   return PromptModel.find(query);
 }
 
-export async function updatePrompt(query) {
-  return PromptModel.updateOne(query);
+export async function updatePrompt(query, obj) {
+  return PromptModel.updateOne(query, obj);
 }

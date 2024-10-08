@@ -25,6 +25,6 @@ export async function getAllService(query) {
   return ServiceModel.find(query);
 }
 
-export async function updateService(query) {
-  return ServiceModel.updateOne(query);
+export async function updateService(query,obj) {
+  return ServiceModel.updateOne(query,obj);
 }

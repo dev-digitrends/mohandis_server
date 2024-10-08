@@ -6,6 +6,8 @@ import UserAPI from "./user";
 import AuthAPI from "./auth";
 import OtpAPI from "./otp";
 import NotificationAPI from "./notification";
+import ServiceAPI from "./service";
+import PromptAPI from "./prompt";
 
 export default class Api {
   constructor(app) {
@@ -20,6 +22,8 @@ export default class Api {
     this.routeGroups.push(new AuthAPI());
     this.routeGroups.push(new OtpAPI());
     this.routeGroups.push(new NotificationAPI());
+    this.routeGroups.push(new ServiceAPI());
+    this.routeGroups.push(new PromptAPI());
   }
 
   setContentType(req, resp, next) {
